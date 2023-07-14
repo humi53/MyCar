@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.callor.car.dao.CarDao">
+	<select id="selectAll">
+		SELECT * FROM tbl_triplog 
+	</select>
+	<select id="findById">
+	</select>
+	<insert id="insert">
+		INSERT INTO tbl_triplog(
+			tl_type,
+			tl_sdate,	tl_stime,	tl_sdistance,	
+		    tl_edate,	tl_etime,	tl_edistance,
+			tl_place,	tl_cost
+		)VALUES(
+			#{tl_type},
+			#{tl_sdate},	#{tl_stime},	#{tl_sdistance},	
+		    #{tl_edate},	#{tl_etime},	#{tl_edistance},
+			#{tl_place},	#{tl_cost}
+		);
+	</insert>
+	<update id="update">
+	</update>
+</mapper>
